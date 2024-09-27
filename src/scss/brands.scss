@@ -1,0 +1,135 @@
+.brands__header {
+	background: linear-gradient(90deg, #f8f8f8 1.39%, $white 100%);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1em;
+	letter-spacing: -0.2px;
+	text-transform: uppercase;
+	color: $gray;
+	border-top: 1px solid #D9FFF5;
+	padding: 16px;
+	width: 100%;
+}
+.swiper-wrapper {
+	position: relative;
+	display: flex;
+	width: 100%;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+.brands-slider__card {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: $white;
+	border: 1px solid $light-gray;
+	border-radius: 6px;
+	height: 72px;
+	width: 240px;
+	padding: 24px 16px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.swiper__img {
+	width: min-content;
+	height: min-content;
+}
+.brands-slider__link {
+	&::after {
+		content: url(../img/go.svg);
+		height: 40px;
+		width: 40px;
+	}
+	&:hover {
+		transform: scale(1.05);
+		transition: transform 0.1s ease;
+	}
+}
+.swiper__dropdown {
+	font-family: $TTLakes;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	text-align: left;
+	display: none;
+	margin: 24px;
+	text-decoration: none;
+	border: none;
+	background: none;
+	padding: 0;
+	cursor: pointer;
+	&::before {
+		content: url(../img/expand.svg);
+		transition: transform 0.1s ease;
+		padding-top: 5px;
+	}
+	&:hover {
+		&::before {
+			content: url(../img/expand.svg);
+			transition: transform 0.3s ease;
+			transform: rotate(-90deg);
+		}
+	}
+}
+.swiper__dropdown--active {
+	&::before {
+		content: url(../img/expand.svg);
+		transition: transform 0.1s ease;
+		transform: rotate(180deg);
+	}
+}
+.swiper-pagination {
+	position: relative;
+	margin-top: 24px;
+	z-index: 1;
+}
+.swiper-pagination-bullet {
+	background: #B5B6BC;
+	width: 12px;
+	height: 12px;
+}
+@media (min-width: 768px) {
+	.brands__header {
+		padding: 24px;
+	}
+	.swiper-wrapper {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+	.swiper-slide {
+		margin: 16px 0 0 24px;
+		width: 224px;
+	}
+	.brands-slider__card--hidden768 {
+		display: none;
+	}
+	.swiper__dropdown {
+		display: flex;
+	}
+}
+@media (max-width: 767px) {
+	.swiper-container {
+		position: relative;
+		top: 16px;
+		width: 100%;
+		overflow: hidden;
+	}
+}
+@media (min-width: 1120px) {
+	.swiper-slide {
+		width: 240px;
+		padding: 32px 16px;
+		margin: 16px 0 0 32px;
+	}
+	.brands-slider__card--hidden768 {
+		display: flex;
+	}
+	.brands-slider__card--hidden1120 {
+		display: none;
+	}
+}

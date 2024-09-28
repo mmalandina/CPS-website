@@ -593,6 +593,55 @@
 }
 
 
+html {
+	height: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scrollbar-color: #41f6d8a5 transparent;
+  scrollbar-width: thin;
+}
+
+@media (max-width: 767px) {
+	html {
+		scrollbar-width: none;
+	}
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	height: 100%;
+	font-family: 'TT Lakes', sans-serif;
+	background-color: #F8F8F8;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+button,
+.link {
+	display: block;
+	text-decoration: none;
+	border: none;
+	background: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+button:hover {
+	transform: scale(0.95);
+	transition: transform 0.1s ease;
+}
+
 @charset "UTF-8";
 .sidenav {
   display: none; }

@@ -9,17 +9,20 @@ module.exports = {
 
   // Выходной файл
   output: {
+    publicPath: '',
     filename: './js/bundle.js'
   },
 
   // Source maps для удобства отладки
   devtool: 'source-map',
-
+  stats: {
+    children: true // Показывать детальные ошибки дочерних компиляций
+  },
   module: {
     rules: [
       // Транспилируем js с babel
       {
-        test: /\.js$/,
+        test: /.js$/,
         include: path.resolve(__dirname, 'src/js'),
         exclude: /node_modules/,
         use: {
@@ -32,21 +35,24 @@ module.exports = {
 
       // Компилируем SCSS в CSS
       {
-        test: /\.(scss|css)$/,
+        test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader, // Extract css to separate file
-          'css-loader', // translates CSS into CommonJS
-          'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader' // compiles Sass to CSS, using Node Sass by default
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
         ]
       },
-
+      {
+        test: /\.css$/i,
+        loader: 'css-loader'
+      },
       // Подключаем шрифты из css
       {
         test: /\.(eot|ttf|woff|woff2)$/,
         use: [
           {
-            loader: 'file-loader?name=./fonts/[name].[ext]'
+            loader: 'file-loader?name=[path][name].[ext]'
           }
         ]
       },
@@ -56,7 +62,7 @@ module.exports = {
         test: /\.(svg|png|jpg|jpeg|webp)$/,
         use: [
           {
-            loader: 'file-loader?name=./static/[name].[ext]'
+            loader: 'file-loader?name=[path][name].[ext]'
           }
         ]
       }
@@ -76,7 +82,8 @@ module.exports = {
 
     // Кладем стили в отдельный файлик
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: '[name].css',
+      publicPath: '/'
     }),
 
     // Копируем картинки

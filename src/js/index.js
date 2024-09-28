@@ -1,3 +1,5 @@
+import '../scss/style.scss'
+
 import './button.js'
 import './swiper.js'
 import './call.js'

@@ -1,115 +1,116 @@
 .header {
-	width: 100%;
-	height: 88px;
-	background: $white;
-	border-bottom: 1px solid #D9FFF5;
+  width: 100%;
+  height: 88px;
+  background: $white;
+  border-bottom: 1px solid #d9fff5;
 }
 .menu {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0;
-	padding: 16px;
-	height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 16px;
+  height: 88px;
 }
 .menu__div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu__button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .menu__button-description {
-	display: none;
+  display: none;
 }
 .menu__div--width-1 {
-	&::after {
-		content: "";
-		width: 2px;
-		height: 32px;
-		margin: 8px;
-		background-color: $light-gray;;
-	}
+  &::after {
+    content: '';
+    width: 2px;
+    height: 32px;
+    margin: 8px;
+    background-color: $light-gray;
+  }
 }
 .menu__item {
-	list-style-type: none;
-	display: flex;
-	text-align: center;
-	margin: 8px;
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+  margin: 8px;
 }
-.menu__div--hidden {
-	display: none;
-}
-@media (min-width: 1120px) {
-	.header {
-		background: none;
-		border-bottom: none;
-	}
-	.menu {
-		flex-wrap: wrap;
-	}
-	.divider2 {
-		&::after {
-			display: none;
-		}
-	}
-	.menu__div--width-3 {
-		max-width: none;
-		position: absolute;
-		right: 16px;
-	}
-	.menu__div--hidden {
-		display: none;
-	}
-	.menu__div--1120hidden {
-		display: none;
-	}
-	.menu__button-description {
-		display: inline-flex;
-		align-items: center;
-		font-family: $TTLakes;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.2px;
-		color: $text-color;
-		position: relative;
-		margin: 8px;
-	}
+.menu__div--width-2 {
+  display: none;
 }
 @media (min-width: 768px) {
-	.menu__div--width-1 {
-		&::after {
-			display: none;
-		}
-	}
-	.divider1 {
-		&::after {
-			content: '';
-			display: block;
-			width: 2px;
-			height: 32px;
-			background-color: $light-gray;
-			margin: 8px;
-		}
-	}
-	.menu__div--width-2 {
-		margin-left: auto;
-	}
-	.divider2 {
-		&::after {
-			content: '';
-			display: block;
-			width: 2px;
-			height: 32px;
-			background-color: $light-gray;
-			margin: 8px;
-		}
-	}
-	.menu__div--hidden {
-		display: flex;
-	}
+  .menu__div--width-1 {
+    &::after {
+      display: none;
+    }
+  }
+  .divider1 {
+    &::after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 32px;
+      background-color: $light-gray;
+      margin: 8px;
+    }
+  }
+  .menu__div--width-2 {
+    margin-left: auto;
+  }
+  .divider2 {
+    &::after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 32px;
+      background-color: $light-gray;
+      margin: 8px;
+    }
+  }
+  .menu__div--hidden {
+    display: flex;
+  }
+}
+
+@media (min-width: 1120px) {
+  .menu__div--hidden {
+    display: none;
+  }
+  .menu__div--1120hidden {
+    display: none;
+  }
+  .header {
+    background: none;
+    border-bottom: none;
+  }
+  .menu {
+    flex-wrap: wrap;
+  }
+  .divider2 {
+    &::after {
+      display: none;
+    }
+  }
+  .menu__div--width-3 {
+    max-width: none;
+    position: absolute;
+    right: 16px;
+  }
+  .menu__button-description {
+    display: inline-flex;
+    align-items: center;
+    font-family: $TTLakes;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text-color;
+    position: relative;
+    margin: 8px;
+  }
 }

@@ -1,11 +1,12 @@
 $text-color: #1b1c21;
 $gray: #7e7e82;
-$light-gray: #EAEAEA;
-$white: #FFFFFF;
-$blue: #41F6D7;
-$pink: #FF3E79;
+$light-gray: #eaeaea;
+$white: #ffffff;
+$blue: #41f6d7;
+$pink: #ff3e79;
 $TTLakes: 'TT Lakes';
 
+@import '../fonts/stylesheet.css';
 
 @import './sidenav.scss';
 @import './header-menu.scss';

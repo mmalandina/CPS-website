@@ -12,15 +12,15 @@ let resize = function (section) {
   if (section === 'brands') {
     param = 6
     selector = 'brands-slider__card--hidden768'
-    if (window.matchMedia('(min-width: 1120px)').matches) {
-      selector = 'brands-slider__card--hidden1120'
+    if (window.matchMedia('(min-width: 1440px)').matches) {
+      selector = 'brands-slider__card--hidden1440'
       param = 8
     }
   } else {
     param = 3
     selector = 'tech-slider__card--hidden768'
-    if (window.matchMedia('(min-width: 1120px)').matches) {
-      selector = 'tech-slider__card--hidden1120'
+    if (window.matchMedia('(min-width: 1440px)').matches) {
+      selector = 'tech-slider__card--hidden1440'
       param = 4
     }
   }

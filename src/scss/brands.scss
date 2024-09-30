@@ -120,7 +120,7 @@
     overflow: hidden;
   }
 }
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
   .swiper-slide {
     width: 240px;
     padding: 32px 16px;
@@ -129,7 +129,7 @@
   .brands-slider__card--hidden768 {
     display: flex;
   }
-  .brands-slider__card--hidden1120 {
+  .brands-slider__card--hidden1440 {
     display: none;
   }
 }

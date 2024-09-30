@@ -74,14 +74,14 @@
     }
   }
 }
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
   .tech-slider__card {
     width: 240px;
   }
   .tech-slider__card--hidden768 {
     display: flex;
   }
-  .tech-slider__card--hidden1120 {
+  .tech-slider__card--hidden1440 {
     display: none;
   }
 }
